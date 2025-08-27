@@ -33,6 +33,9 @@ jobs:
           cache: pnpm
 
       - name: Install deps (workspace)
+        run: pnpm i
+
+      - name: Install deps (workspace)
         run: pnpm build
         working-directory: apps/stage-web
 
