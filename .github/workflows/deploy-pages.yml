@@ -40,7 +40,7 @@ jobs:
       - name: Build stage-web
         run: |
           GITHUB_PAGES=true pnpm -C apps/stage-web build
-          cp apps/stage-web/dist/index.html apps/stage-web/dist/404.html
+          cp apps/stage-web/index.html apps/stage-web/dist/404.html
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
