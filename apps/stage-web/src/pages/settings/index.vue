@@ -72,24 +72,24 @@ const settings = computed(() => [
     icon: 'i-solar:layers-bold-duotone',
     to: '/settings/modules',
   },
-  {
-    title: t('settings.pages.scene.title'),
-    description: t('settings.pages.scene.description'),
-    icon: 'i-solar:armchair-2-bold-duotone',
-    to: '/settings/scene',
-  },
+  // {
+  //   title: t('settings.pages.scene.title'),
+  //   description: t('settings.pages.scene.description'),
+  //   icon: 'i-solar:armchair-2-bold-duotone',
+  //   to: '/settings/scene',
+  // },
   {
     title: t('settings.pages.models.title'),
     description: t('settings.pages.models.description'),
     icon: 'i-solar:people-nearby-bold-duotone',
     to: '/settings/models',
   },
-  {
-    title: t('settings.pages.memory.title'),
-    description: t('settings.pages.memory.description'),
-    icon: 'i-solar:leaf-bold-duotone',
-    to: '/settings/memory',
-  },
+  // {
+  //   title: t('settings.pages.memory.title'),
+  //   description: t('settings.pages.memory.description'),
+  //   icon: 'i-solar:leaf-bold-duotone',
+  //   to: '/settings/memory',
+  // },
   {
     title: t('settings.pages.providers.title'),
     description: t('settings.pages.providers.description'),

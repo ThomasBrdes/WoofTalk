@@ -8,7 +8,7 @@ animations:
     title: Use Page Specific Transitions
 dialogs:
   onboarding:
-    title: Welcome to AIRI!
+    title: Welcome to WoofTalk!
     description: Let's set up your first AI provider to get started.
     selectProvider: Choose an AI Provider
     configureProvider: Configure {provider}
@@ -79,7 +79,7 @@ pages:
     delete: Delete
     delete_card: Delete Card
     delete_confirmation: Are you sure you want to delete this card?
-    description: Use AIRI character card presets
+    description: Use WoofTalk character card presets
     description_label: Description
     drop_here: Drop to upload
     create_card: Create a new Card
@@ -142,7 +142,7 @@ pages:
       model: Speech / Model
       voice: Speech / Voice
     systemprompt: System Prompt
-    title: AIRI Card
+    title: WoofTalk Card
     try_different_search: Try a different search term
     upload: Upload
     upload_desc: Click or drag file to upload
@@ -261,9 +261,9 @@ pages:
     helpinfo:
       title: First time here?
       description: >
-        AIRI requires at least one {chat} provider to be configured to think,
+        WoofTalk requires at least one {chat} provider to be configured to think,
         and behave properly. You could think of it as the brain of the
-        characters living in AIRI system.
+        characters living in WoofTalk system.
     common:
       fields:
         field:
@@ -487,7 +487,7 @@ pages:
           presets:
             - colors:
                 - AIRI Green
-              description: The default greenish theme color, brought by AIRI to you!
+              description: The default greenish theme color, brought by WoofTalk to you!
               title: Default Color
             - colors:
                 - Taupe
@@ -555,7 +555,7 @@ sections:
 theme:
   title: Theme
   description: |
-    Switch the base theme of AIRI, Light mode or Dark mode.
+    Switch the base theme of WoofTalk, Light mode or Dark mode.
 title: Settings
 voices: Voice
 vrm:

@@ -66,11 +66,6 @@ watch(selectedModel, async () => {
         Click <strong>Select Model</strong> to import different formats of
         models into catalog, currently, <code>.zip</code> (Live2D) and <code>.vrm</code> (VRM) are supported.
       </p>
-      <p>
-        Neuro-sama uses 2D model driven by Live2D Inc. developed framework.
-        While Grok Ani (first female character announced in Grok Companion)
-        uses 3D model that is driven by VRM / MMD open formats.
-      </p>
     </Callout>
     <ModelManagerDialog v-model="selectedModel">
       <Button variant="secondary">

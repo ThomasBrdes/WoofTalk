@@ -39,10 +39,14 @@ export interface DisplayModelURL {
 }
 
 const displayModelsPresets: DisplayModel[] = [
-  { id: 'preset-live2d-1', format: DisplayModelFormat.Live2dZip, type: 'url', url: '/assets/live2d/models/hiyori_pro_zh.zip', name: 'Hiyori (Pro)', previewImage: '/assets/live2d/models/hiyori/preview.png', importedAt: 1733113886840 },
-  { id: 'preset-live2d-2', format: DisplayModelFormat.Live2dZip, type: 'url', url: '/assets/live2d/models/hiyori_free_zh.zip', name: 'Hiyori (Free)', previewImage: '/assets/live2d/models/hiyori/preview.png', importedAt: 1733113886840 },
-  { id: 'preset-vrm-1', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/AvatarSample-A/AvatarSample_A.vrm', name: 'AvatarSample_A', previewImage: '/assets/vrm/models/AvatarSample-A/preview.png', importedAt: 1733113886840 },
-  { id: 'preset-vrm-2', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/AvatarSample-B/AvatarSample_B.vrm', name: 'AvatarSample_B', previewImage: '/assets/vrm/models/AvatarSample-B/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-live2d-1', format: DisplayModelFormat.Live2dZip, type: 'url', url: '/assets/live2d/models/hiyori_pro_zh.zip', name: 'Hiyori', previewImage: '/assets/live2d/models/hiyori/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-vrm-1', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/AvatarSample-A/AvatarSample_A.vrm', name: 'Megumi', previewImage: '/assets/vrm/models/AvatarSample-A/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-vrm-2', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/AvatarSample-B/AvatarSample_B.vrm', name: 'Baibai', previewImage: '/assets/vrm/models/AvatarSample-B/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-vrm-3', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/frieren/frieren.vrm', name: 'Frieren', previewImage: '/assets/vrm/models/frieren/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-vrm-8', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/kiroku/kiroku.vrm', name: 'Kiroku', previewImage: '/assets/vrm/models/kiroku/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-vrm-9', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/maria/maria.vrm', name: 'Maria', previewImage: '/assets/vrm/models/maria/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-vrm-10', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/magna/magna.vrm', name: 'Magna', previewImage: '/assets/vrm/models/magna/preview.png', importedAt: 1733113886840 },
+  { id: 'preset-vrm-11', format: DisplayModelFormat.VRM, type: 'url', url: '/assets/vrm/models/moonie/moonie.vrm', name: 'Moonie', previewImage: '/assets/vrm/models/moonie/preview.png', importedAt: 1733113886840 },
 ]
 
 export const useDisplayModelsStore = defineStore('display-models', () => {
