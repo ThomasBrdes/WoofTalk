@@ -36,7 +36,7 @@
 > Inspired by [Neuro-sama](https://www.youtube.com/@Neurosama)
 
 > [!WARNING]
-> **Attention:** We **do not** have any officially minted cryptocurrency or token associated with this project. Please check the information and proceed with caution.
+> **Attention:** We **do not** have any fficially minted cryptocurrency or token associated with this project. Please check the information and proceed with caution.
 
 > [!NOTE]
 >
