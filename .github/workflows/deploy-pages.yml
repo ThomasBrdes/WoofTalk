@@ -33,7 +33,8 @@ jobs:
           cache: pnpm
 
       - name: Install deps (workspace)
-        run: pnpm i
+        run: pnpm build
+        working-directory: apps/stage-web
 
       # Build stage-web with the right base path for GH Pages.
       # If your repo is https://<user>.github.io/<repo>/ then base must be "/<repo>/".
