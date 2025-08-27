@@ -33,7 +33,7 @@
   <a href="https://trendshift.io/repositories/14636" target="_blank"><img src="https://trendshift.io/api/badge/repositories/14636" alt="moeru-ai%2Fairi | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
 </p>
 
-> Heavily inspired by [Neuro-sama](https://www.youtube.com/@Neurosama)
+> Inspired by [Neuro-sama](https://www.youtube.com/@Neurosama)
 
 > [!WARNING]
 > **Attention:** We **do not** have any officially minted cryptocurrency or token associated with this project. Please check the information and proceed with caution.
