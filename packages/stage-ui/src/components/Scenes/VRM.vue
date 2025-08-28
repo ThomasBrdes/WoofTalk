@@ -330,7 +330,7 @@ defineExpose({
       <VRMModel
         ref="modelRef"
         :model-src="props.modelSrc"
-        :idle-animation="props.idleAnimation"
+        :idle-animation="import.meta.env.BASE_URL + 'assets/vrm/animations/idle_loop.vrma'"
         :paused="props.paused"
         :npr-equirect-tex="nprEquirectTex"
         @load-model-progress="(val) => emit('loadModelProgress', val)"
