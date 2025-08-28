@@ -31,7 +31,7 @@ const props = withDefaults(defineProps<{
   paused?: boolean
 }>(), {
   showAxes: false,
-  idleAnimation: `assets/vrm/animations/idle_loop.vrma`,
+  idleAnimation: 'assets/vrm/animations/idle_loop.vrma',
   paused: false,
 })
 
