@@ -1,7 +1,7 @@
 import { useBroadcastChannel, useLocalStorage } from '@vueuse/core'
 import { defineStore } from 'pinia'
-import { ref, watch } from 'vue'
-
+import { computed, onMounted,  ref, watch } from 'vue'
+import localforage from 'localforage'
 import defaultSkyBoxSrc from '../components/Scenes/Tres/assets/sky_linekotsi_23_HDRI.hdr?url'
 
 type BroadcastChannelEvents
@@ -38,6 +38,35 @@ export const useVRM = defineStore('vrm', () => {
   const modelOrigin = useLocalStorage('settings/vrm/modelOrigin', { x: 0, y: 0, z: 0 })
   const modelOffset = useLocalStorage('settings/vrm/modelOffset', { x: 0, y: 0, z: 0 })
   const modelRotationY = useLocalStorage('settings/vrm/modelRotationY', 0)
+
+  const indexedDbModelFile = ref<File | null>(null)
+
+  async function loadModelFileFromIndexedDb() {
+    const file = await localforage.getItem<File>('assets-models-vrm')
+    if (file) {
+      indexedDbModelFile.value = file
+    }
+  }
+
+  onMounted(async () => loadModelFileFromIndexedDb())
+  // onShouldUpdateView(() => loadModelFileFromIndexedDb())
+
+  const modelFile = computed({
+    get: () => {
+      return indexedDbModelFile.value
+    },
+    set: (file: File | null) => {
+      if (file) {
+        localforage.setItem('assets-models-vrm', file)
+      }
+      else {
+        localforage.removeItem('assets-models-vrm')
+      }
+
+      indexedDbModelFile.value = file
+    },
+  })
+
 
   const cameraFOV = useLocalStorage('settings/vrm/cameraFOV', 40)
   const cameraPosition = useLocalStorage('settings/vrm/camera-position', { x: 0, y: 0, z: -1 })
@@ -90,8 +119,10 @@ export const useVRM = defineStore('vrm', () => {
 
   return {
     defaultModelUrl,
+    modelFile,
     modelSize,
     modelUrl,
+    
     scale,
     modelOrigin,
     modelOffset,
