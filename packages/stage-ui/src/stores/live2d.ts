@@ -28,6 +28,10 @@ export const useLive2d = defineStore('live2d', () => {
     }
   })
 
+
+  const defaultModelUrl = import.meta.env.BASE_URL + '/assets/live2d/models/hiyori_pro_zh.zip'
+  const modelUrl = useLocalStorage<string>('settings/live2d/model-src', defaultModelUrl)
+
   const position = useLocalStorage('settings/live2d/position', { x: 0, y: 0 }) // position is relative to the center of the screen, units are %
   const positionInPercentageString = computed(() => ({
     x: `${position.value.x}%`,
@@ -39,6 +43,9 @@ export const useLive2d = defineStore('live2d', () => {
   const scale = useLocalStorage('settings/live2d/scale', 1)
 
   return {
+    // expose modelUrl again so the viewer can load something
+    modelUrl,
+    
     position,
     positionInPercentageString,
     currentMotion,
