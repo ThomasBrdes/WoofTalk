@@ -66,8 +66,8 @@ components.d.ts
 **/.netlify/functions-serve/*
 
 **/public/assets/js/*
-**/public/assets/live2d/models/*
-**/public/assets/vrm/models/*
+# **/public/assets/live2d/models/*
+# **/public/assets/vrm/models/*
 
 # Serving fonts locally
 **/public/assets/fonts/
