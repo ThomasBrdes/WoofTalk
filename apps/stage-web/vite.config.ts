@@ -19,7 +19,7 @@ import { defineConfig } from 'vite'
 import { VitePWA } from 'vite-plugin-pwa'
 
 export default defineConfig({
-  base: process.env.GITHUB_PAGES ? '/WoofTalk/',  // 👈 add this line
+  base: process.env.GITHUB_PAGES ? '/WoofTalk/' : '/WoofTalk/',  // 👈 add this line
   optimizeDeps: {
     exclude: [
       // Internal Packages
