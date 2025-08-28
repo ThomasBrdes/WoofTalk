@@ -43,7 +43,7 @@ jobs:
       # If your repo is https://<user>.github.io/<repo>/ then base must be "/<repo>/".
       - name: Build stage-web
         run: |
-          pnpm -C apps/stage-web build -- --base="/${{ github.event.repository.name }}/"
+          pnpm -C apps/stage-web build
           cp apps/stage-web/dist/index.html apps/stage-web/dist/404.html
 
       - name: Configure Pages
