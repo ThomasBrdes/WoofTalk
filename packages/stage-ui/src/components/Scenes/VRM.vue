@@ -24,8 +24,6 @@ import SkyBoxEnvironment from './VRM/SkyBoxEnvironment.vue'
 import { useVRM } from '../../stores/vrm'
 import { OrbitControls, VRMModel } from '../Scenes'
 
-const idleAnimationDefault = `${import.meta.env.BASE_URL}assets/vrm/animations/idle_loop.vrma`
-
 const props = withDefaults(defineProps<{
   modelSrc?: string
   showAxes?: boolean
@@ -33,7 +31,7 @@ const props = withDefaults(defineProps<{
   paused?: boolean
 }>(), {
   showAxes: false,
-  idleAnimation: idleAnimationDefault,
+  idleAnimation: `${import.meta.env.BASE_URL}assets/vrm/animations/idle_loop.vrma`,
   paused: false,
 })
 
