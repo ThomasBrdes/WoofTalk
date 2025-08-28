@@ -30,7 +30,7 @@ export const useVRM = defineStore('vrm', () => {
     }
   })
 
-  const defaultModelUrl = import.meta.env.BASE_URL + '/assets/vrm/models/AvatarSample-B/AvatarSample_B.vrm'
+  const defaultModelUrl = import.meta.env.BASE_URL + 'assets/vrm/models/AvatarSample-B/AvatarSample_B.vrm'
   const modelUrl = useLocalStorage('settings/vrm/modelURL', defaultModelUrl)
 
   const scale = useLocalStorage('settings/vrm/cameraScale', 1)
@@ -89,6 +89,7 @@ export const useVRM = defineStore('vrm', () => {
   const skyBoxIntensity = useLocalStorage('settings/vrm/skyBoxIntensity', 0.1)
 
   return {
+    defaultModelUrl,
     modelSize,
     modelUrl,
     scale,
