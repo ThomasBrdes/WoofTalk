@@ -30,6 +30,9 @@ export const useVRM = defineStore('vrm', () => {
     }
   })
 
+  const defaultModelUrl = import.meta.env.BASE_URL + '/assets/vrm/models/AvatarSample-B/AvatarSample_B.vrm'
+  const modelUrl = useLocalStorage('settings/vrm/modelURL', defaultModelUrl)
+
   const scale = useLocalStorage('settings/vrm/cameraScale', 1)
   const modelSize = useLocalStorage('settings/vrm/modelSize', { x: 0, y: 0, z: 0 })
   const modelOrigin = useLocalStorage('settings/vrm/modelOrigin', { x: 0, y: 0, z: 0 })
@@ -87,7 +90,7 @@ export const useVRM = defineStore('vrm', () => {
 
   return {
     modelSize,
-
+    modelUrl,
     scale,
     modelOrigin,
     modelOffset,
