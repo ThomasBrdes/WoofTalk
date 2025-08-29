@@ -66,12 +66,12 @@ const settings = computed(() => [
     icon: 'i-solar:emoji-funny-square-bold-duotone',
     to: '/settings/airi-card',
   },
-  {
-    title: t('settings.pages.modules.title'),
-    description: t('settings.pages.modules.description'),
-    icon: 'i-solar:layers-bold-duotone',
-    to: '/settings/modules',
-  },
+  // {
+  //   title: t('settings.pages.modules.title'),
+  //   description: t('settings.pages.modules.description'),
+  //   icon: 'i-solar:layers-bold-duotone',
+  //   to: '/settings/modules',
+  // },
   // {
   //   title: t('settings.pages.scene.title'),
   //   description: t('settings.pages.scene.description'),

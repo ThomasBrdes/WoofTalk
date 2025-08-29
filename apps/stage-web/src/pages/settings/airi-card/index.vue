@@ -14,6 +14,28 @@ import CardCreationDialog from './components/CardCreationDialog.vue'
 import CardDetailDialog from './components/CardDetailDialog.vue'
 import CardListItem from './components/CardListItem.vue'
 import DeleteCardDialog from './components/DeleteCardDialog.vue'
+import { AIRI_CARD_PRESETS } from './presets'
+import { onMounted, nextTick } from 'vue'
+
+const store = useAiriCardStore()
+
+onMounted(async () => {
+  // wait a tick in case the store hydrates from storage
+  await nextTick()
+
+  // add only those presets that are not already present (match by name)
+  const existingNames = new Set(
+    Array.from(cardStore.cards.values()).map(c => c.name?.trim().toLowerCase())
+  )
+
+  for (const preset of AIRI_CARD_PRESETS) {
+    const key = preset.name?.trim().toLowerCase()
+    if (!existingNames.has(key)) {
+      addCard(preset)
+      existingNames.add(key)
+    }
+  }
+})
 
 const { t } = useI18n()
 const cardStore = useAiriCardStore()
